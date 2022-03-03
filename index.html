@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Josefin+Slab:wght@100&family=Lato:wght@300&family=Open+Sans+Condensed:wght@300&family=Oswald:wght@300;400&family=Quicksand:wght@300&family=Quintessential&family=Roboto:ital,wght@1,100&family=Source+Code+Pro&family=Spartan:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="shopping-list-container">
+      <p id="date"></p>
+      <h1>Shopping List</h1>
+      <div class="shopping-items">
+        <h2>Things I need more off</h2>
+        <input
+          class="input-first-text"
+          type="text"
+          name=""
+          id="shop-input"
+          placeholder="Write down your shopping here.."
+        />
+        <input class="input-number" type="text" id="price-input" />
+        <button class="add-btn" id="add-btn" onclick="addToList()">Add</button>
+        <div class="shopping-list">
+          <ul id="shopping-list"></ul>
+        </div>
+        <div class="total-price-box">
+          <p class="total-price-text">Total price of shopping list:</p>
+          <p id="total-price"></p>
+        </div>
+      </div>
+
+      <div class="enough-items">
+        <h2>Things I have enough off</h2>
+        <input
+          class="input-text"
+          type="text"
+          placeholder="Things you have enough off.."
+          id="enough-input"
+        />
+        <button class="add-btn" onclick="addEnough()">Add</button>
+        <ul id="enough-list"></ul>
+      </div>
+      <br />
+      <div class="soon-empty-items">
+        <h2>Things I soon need</h2>
+        <input
+          class="input-text"
+          type="text"
+          placeholder="Things that start getting empty.."
+          id="soon-empty-input"
+        />
+        <button class="add-btn" onclick="addSoonEmpty()">Add</button>
+        <ul id="soon-empty-list"></ul>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
