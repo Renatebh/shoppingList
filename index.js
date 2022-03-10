@@ -40,13 +40,24 @@ function listToShop() {
   for (let i = 0; i < shoppingArray.length; i++) {
     shoppingList.innerHTML += `<li><p>${shoppingArray[i].name}</p><p>${shoppingArray[i].price}</p>
     <button id="delete-btn" onclick="deleteItem(${i}, 'shop')">x</button></li>`;
+
+    // Sum total of shopping list
+    // her er reducern!!!
+    // let prices = shoppingArray.map((shoppingPrice) => shoppingPrice.price);
+    // let reducer = (accumulator, curr) => accumulator + curr;
+    // console.log(prices.reduce(reducer));
+    // document.getElementById("total-price").innerHTML = prices.reduce(reducer);
+    let sum = 0;
+
+    shoppingArray.forEach((price) => {
+      sum += shoppingArray[i].price;
+    });
+    console.log(shoppingArray.length);
+    document.getElementById("total-price").innerHTML = sum;
   }
-
-  // Sum total of shopping list
-  let prices = shoppingArray.map((shoppingPrice) => shoppingPrice.price);
-  let reducer = (accumulator, curr) => accumulator + curr;
-
-  document.getElementById("total-price").innerHTML = prices.reduce(reducer);
+  if (shoppingArray.length === 0) {
+    document.getElementById("total-price").innerHTML = 0;
+  }
 }
 
 // Things you have enough of list
